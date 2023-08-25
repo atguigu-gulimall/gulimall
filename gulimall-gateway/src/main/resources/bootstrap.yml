@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: c349b1ac-1eea-45ec-b7cf-f7f4cbea116f
+        ext-config:
+          - data-id: server.yml
+            group: DEV
+            refresh: true
+          - data-id: config.yml
+            group: DEV
+            refresh: true
+    gateway:
+      routes:
+        - id: test_route
+          uri: https://www.baidu.com
+          predicates:
+            - Query=url,baidu
+
+        - id: qq_route
+          uri: https://www.qq.com
+          predicates:
+            - Query=url,qq
+
+
