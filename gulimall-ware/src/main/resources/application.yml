@@ -1,5 +1,5 @@
 server:
-  port: 10050
+  port: 10060
 
 spring:
   application:
@@ -7,20 +7,21 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://192.168.56.10:3306/gulimall_wms
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.150:3306/gulimall_wms
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.1.150:8848
+        namespace: 5bb7d83e-c429-49a4-8200-ea796f91b6f1
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   thymeleaf:
     cache: false
   redis:
-    host: 192.168.56.10
+    host: 192.168.1.150
     port: 6379
 
 

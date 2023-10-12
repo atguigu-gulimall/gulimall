@@ -4,18 +4,23 @@ spring:
   cloud:
     nacos:
       config:
-        namespace: b5a8c6b8-9a12-4ffb-8657-1c6e51545079
-        server-addr: 127.0.0.1:8848
+        namespace: 5bb7d83e-c429-49a4-8200-ea796f91b6f1
+        server-addr: 192.168.1.150:8848
         ext-config:
+          ## 共享配置的dataid格式为： xxx + 后缀名，不同服务的共享配置可以通过group来区分
           - data-id: server.yml
-            group: DEV
+            group: COUPON
             refresh: true
           - data-id: datasource.yml
-            group: DEV
+            group: COUPON
             refresh: true
-          - data-id: config.yml
-            group: DEV
+          ## 统一注册到dev命名空间
+          - data-id: register-config.yml
+            group: COUPON
             refresh: true
-          - data-id: other.yml
-            group: DEV
+          - data-id: mybatis-plus.yml
+            group: COUPON
+            refresh: true
+          - data-id: logging.yml
+            group: COUPON
             refresh: true
