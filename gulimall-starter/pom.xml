@@ -12,7 +12,7 @@
 
     <groupId>com.atguigu.gulimall</groupId>
     <artifactId>gulimall-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>gulimall-starter</name>
     <description>用来统一管理所有服务的springboot版本</description>
 
