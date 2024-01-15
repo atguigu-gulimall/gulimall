@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: gulimall-product
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.1.150:8848
+        file-extension: yaml
+        namespace: a78f9678-9888-41bf-89f7-f2fca65ebbde
+        shared-configs:
+
+          # 端口
+          - dataId: server.yml
+            refresh: true
+            group: PRODUCT
+
+          # 数据源
+          - dataId: datasource.yml
+            refresh: true
+            group: PRODUCT
+
+          # 服务的注册与发现
+          - dataId: discovery.yml
+            refresh: true
+            group: COMMON
+
+          # mybatis-plus
+          - dataId: mybatis-plus.yml
+            refresh: true
+            group: COMMON
+
+          # 日志相关
+          - dataId: log.yml
+            refresh: true
+            group: COMMON
+
+          # 其他
+#          - dataId: other.yml
+#            refresh: true
+#            group: COUPON
+management:
+  endpoints:
+    web:
+      exposure:
+        ## yml文件中存在特殊字符，必须用单引号包含，否则启动报错
+        include: '*'
