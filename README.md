@@ -185,7 +185,8 @@ docker run -p 6379:6379 --name redis \
 
 ## 说明
 
-1. gulimall-product项目中使用了nacos-config，目的是学习nacos，其他项目中暂时不使用；
+1. nacos上创建dev命名空间，并修改dataid，之后导入 doc/nacos-config-files/nacos_config_export_20240204121102.zip ；
+2. gulimall-product项目中使用了nacos-config，目的是学习nacos，其他项目中暂时不使用；
 2. gulimall-common为公共依赖模块，也可以把它放到私服上去，这样的话，其它团队中就可以直接使用这个模块的即可，并且工程的主pom文件中也无需引入。
 
 
