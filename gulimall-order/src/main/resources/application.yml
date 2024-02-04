@@ -7,14 +7,14 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://192.168.1.150:3306/gulimall_oms
+    url: jdbc:mysql://192.168.1.110:3306/gulimall_oms
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.1.150:8848
-        namespace: 5bb7d83e-c429-49a4-8200-ea796f91b6f1
+        server-addr: 192.168.1.110:8848
+        namespace: f6ab2871-ed72-4282-96a0-df26bc48109e
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
@@ -37,7 +37,7 @@ mybatis-plus:
 
 logging:
   level:
-    com.atguigu.gulimall: info
+    com.atguigu.gulimall: debug
 
 
 

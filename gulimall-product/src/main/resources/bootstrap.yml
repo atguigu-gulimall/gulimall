@@ -1,23 +1,30 @@
+server:
+  port: 10050
+
 spring:
   application:
     name: gulimall-product
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.1.110:3306/gulimall_pms
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    host: 192.168.1.110
+    port: 6379
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  thymeleaf:
+    cache: false
+
   cloud:
     nacos:
       config:
-        server-addr: 192.168.1.150:8848
-        file-extension: yaml
-        namespace: a78f9678-9888-41bf-89f7-f2fca65ebbde
-        shared-configs:
-
-          # 端口
-          - dataId: server.yml
-            refresh: true
-            group: PRODUCT
-
-          # 数据源
-          - dataId: datasource.yml
-            refresh: true
-            group: PRODUCT
+        namespace: f6ab2871-ed72-4282-96a0-df26bc48109e
+        server-addr: 192.168.1.110:8848
+        ext-config:
 
           # 服务的注册与发现
           - dataId: discovery.yml
@@ -34,10 +41,7 @@ spring:
             refresh: true
             group: COMMON
 
-          # 其他
-#          - dataId: other.yml
-#            refresh: true
-#            group: COUPON
+
 management:
   endpoints:
     web:

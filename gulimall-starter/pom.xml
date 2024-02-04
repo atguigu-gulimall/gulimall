@@ -12,7 +12,7 @@
 
     <groupId>com.atguigu.gulimall</groupId>
     <artifactId>gulimall-starter</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>gulimall-starter</name>
     <description>用来统一管理所有服务的springboot版本</description>
 
@@ -53,12 +53,12 @@
     <!--添加发布插件的依赖-->
     <distributionManagement>
         <repository>
-            <id>zeanzai-release</id>
-            <url>http://192.168.1.150:8081/repository/zeanzai-release/</url>
+            <id>releases</id>   <!-- 这里的id要和settings.xml中server部分中配置的id保持一致 -->
+            <url>http://192.168.1.110:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>zeanzai-snapshot</id>
-            <url>http://192.168.1.150:8081/repository/zeanzai-snapshot/</url>
+            <id>snapshots</id>  <!-- 这里的id要和settings.xml中server部分中配置的id保持一致 -->
+            <url>http://192.168.1.110:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

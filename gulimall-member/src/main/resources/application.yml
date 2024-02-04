@@ -4,25 +4,24 @@ server:
 spring:
   application:
     name: gulimall-member
-
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://192.168.1.150:3306/gulimall_ums
+    url: jdbc:mysql://192.168.1.110:3306/gulimall_ums
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.1.150:8848
-        namespace: 5bb7d83e-c429-49a4-8200-ea796f91b6f1
+        server-addr: 192.168.1.110:8848
+        namespace: f6ab2871-ed72-4282-96a0-df26bc48109e
 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   thymeleaf:
     cache: false
   redis:
-    host: 192.168.1.150
+    host: 192.168.1.110
     port: 6379
 
 
@@ -36,9 +35,9 @@ mybatis-plus:
       logic-not-delete-value: 0
 
 
-#logging:
-#  level:
-#    com.atguigu.gulimall: debug
+logging:
+  level:
+    com.atguigu.gulimall: debug
 
 
 

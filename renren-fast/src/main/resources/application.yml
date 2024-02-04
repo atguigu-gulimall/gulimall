@@ -25,7 +25,7 @@ spring:
   redis:
     open: false  # 是否开启redis缓存  true开启   false关闭
     database: 0
-    host: 192.168.1.150
+    host: 192.168.1.110
     port: 6379
     password:    # 密码（默认为空）
     timeout: 6000ms  # 连接超时时长（毫秒）
@@ -42,8 +42,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.1.150:8848
-        namespace: 5bb7d83e-c429-49a4-8200-ea796f91b6f1
+        server-addr: 192.168.1.110:8848
+        namespace: f6ab2871-ed72-4282-96a0-df26bc48109e
 #  resources:
 #    add-mappings: false
 

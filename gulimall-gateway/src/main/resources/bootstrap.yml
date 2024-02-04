@@ -4,8 +4,8 @@ spring:
   cloud:
     nacos:
       config:
-        namespace: 5bb7d83e-c429-49a4-8200-ea796f91b6f1
-        server-addr: 192.168.1.150:8848
+        namespace: f6ab2871-ed72-4282-96a0-df26bc48109e
+        server-addr: 192.168.1.110:8848
         ext-config:
 
           ## 共享配置的dataid格式为： xxx + 后缀名，不同服务的共享配置可以通过group来区分
@@ -13,18 +13,17 @@ spring:
             group: GATEWAY
             refresh: true
 
-          ## 统一注册到dev命名空间
-          - data-id: register-config.yml
-            group: COUPON
-            refresh: true
-
-          - data-id: logging.yml
-            group: COUPON
-            refresh: true
-
           ## 配置路由规则
           - data-id: route-rules.yml
             group: GATEWAY
             refresh: true
 
+          # 服务的注册与发现
+          - dataId: discovery.yml
+            refresh: true
+            group: COMMON
 
+          # 日志相关
+          - dataId: log.yml
+            refresh: true
+            group: COMMON
