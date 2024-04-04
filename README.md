@@ -238,12 +238,12 @@ docker run -p 6379:6379 --name redis \
 
 ## 参考资料
 
-1。 源代码： https://gitee.com/leifengyang/gulimall
-2。 elememt： https://element.eleme.cn/#/zh-CN
-3。 spring官网： https://spring.io/projects/spring-cloud
-4。 spring旧版本指导手册： https://docs.spring.io/spring-cloud/docs/
-5。 如何查看spring旧版文档： https://blog.csdn.net/weixin_42091529/article/details/113694682
-6。 mybatis-plus官网： https://baomidou.com/pages/6b03c5/#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95
+1. 源代码： https://gitee.com/leifengyang/gulimall
+2. elememt： https://element.eleme.cn/#/zh-CN
+3. spring官网： https://spring.io/projects/spring-cloud
+4. spring旧版本指导手册： https://docs.spring.io/spring-cloud/docs/
+5. 如何查看spring旧版文档： https://blog.csdn.net/weixin_42091529/article/details/113694682
+6. mybatis-plus官网： https://baomidou.com/pages/6b03c5/#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95
 
 
 
