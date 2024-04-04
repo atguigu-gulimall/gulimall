@@ -249,9 +249,4 @@ docker run -p 6379:6379 --name redis \
 
 
 
-## 测试git连通性
-
-提交
-
-
 
